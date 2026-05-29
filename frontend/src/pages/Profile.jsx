@@ -522,6 +522,7 @@ export default function Profile() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 12, marginBottom: 24 }}>
               {renderSourceToggle("LinkedIn Scraper", "scrape_linkedin")}
               {renderSourceToggle("Indeed Scraper", "scrape_indeed")}
+              {renderSourceToggle("ZipRecruiter Scraper", "scrape_ziprecruiter")}
               {renderSourceToggle("Himalayas Remote API", "scrape_himalayas")}
               {renderSourceToggle("Remotive API", "scrape_remotive")}
               {renderSourceToggle("We Work Remotely RSS", "scrape_wwr")}

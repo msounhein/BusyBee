@@ -63,6 +63,7 @@ class Profile(Base):
     scrape_himalayas = Column(Boolean, default=True)
     scrape_remotive = Column(Boolean, default=True)
     scrape_wwr = Column(Boolean, default=True)
+    scrape_ziprecruiter = Column(Boolean, default=True)
     llm_provider = Column(String(50), default='zai')
     llm_api_key = Column(String(255), default='')
     llm_model = Column(String(255), default='glm-5.1')

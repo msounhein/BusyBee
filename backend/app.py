@@ -190,6 +190,7 @@ def get_profile():
             'scrape_himalayas': getattr(profile, 'scrape_himalayas', True),
             'scrape_remotive': getattr(profile, 'scrape_remotive', True),
             'scrape_wwr': getattr(profile, 'scrape_wwr', True),
+            'scrape_ziprecruiter': getattr(profile, 'scrape_ziprecruiter', True),
             'llm_provider': getattr(profile, 'llm_provider', 'zai'),
             'llm_api_key': getattr(profile, 'llm_api_key', ''),
             'llm_model': getattr(profile, 'llm_model', 'glm-5.1'),
@@ -230,6 +231,8 @@ def update_profile():
             profile.scrape_remotive = bool(data['scrape_remotive'])
         if 'scrape_wwr' in data:
             profile.scrape_wwr = bool(data['scrape_wwr'])
+        if 'scrape_ziprecruiter' in data:
+            profile.scrape_ziprecruiter = bool(data['scrape_ziprecruiter'])
         if 'llm_provider' in data:
             profile.llm_provider = data['llm_provider']
         if 'llm_api_key' in data:

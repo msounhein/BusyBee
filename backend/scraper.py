@@ -551,6 +551,8 @@ def run_scraper():
             active_sites.append("linkedin")
         if getattr(profile, 'scrape_indeed', True):
             active_sites.append("indeed")
+        if getattr(profile, 'scrape_ziprecruiter', True):
+            active_sites.append("zip_recruiter")
 
         # Scrape active search-term sites concurrently per term
         if active_sites and terms:

@@ -32,6 +32,7 @@ def init_db():
             ("scrape_himalayas", "ALTER TABLE profile ADD COLUMN scrape_himalayas BOOLEAN DEFAULT 1"),
             ("scrape_remotive", "ALTER TABLE profile ADD COLUMN scrape_remotive BOOLEAN DEFAULT 1"),
             ("scrape_wwr", "ALTER TABLE profile ADD COLUMN scrape_wwr BOOLEAN DEFAULT 1"),
+            ("scrape_ziprecruiter", "ALTER TABLE profile ADD COLUMN scrape_ziprecruiter BOOLEAN DEFAULT 1"),
             ("llm_provider", "ALTER TABLE profile ADD COLUMN llm_provider VARCHAR(50) DEFAULT 'zai'"),
             ("llm_api_key", "ALTER TABLE profile ADD COLUMN llm_api_key VARCHAR(255) DEFAULT ''"),
             ("llm_model", "ALTER TABLE profile ADD COLUMN llm_model VARCHAR(255) DEFAULT 'glm-5.1'"),
