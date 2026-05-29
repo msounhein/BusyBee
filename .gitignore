@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Database & Runtime Data
+data/
+backend/jobs.db
+backend/data/
+
+# Environment
+.env
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# Local Dev and Agent Files
+logs/
+.diary/
+artifacts/
+scratch/
+msounhein/
+Test
+graphify-out/
+backend/generated_resumes/
