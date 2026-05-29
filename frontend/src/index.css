@@ -119,10 +119,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Glassmorphism for sidebar and surface cards */
-aside, div[style*="background: var(--surface)"], div[style*="background: var(--surface-elevated)"] {
+/* Glassmorphism for sidebar only */
+aside {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Base shadow for surface cards without heavy filter repaints */
+div[style*="background: var(--surface)"], div[style*="background: var(--surface-elevated)"] {
   box-shadow: var(--shadow-sm);
 }
 
