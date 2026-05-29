@@ -51,12 +51,12 @@ function Layout() {
       <div style={{
         position: 'absolute', width: '500px', height: '500px',
         background: 'radial-gradient(circle, var(--accent-muted) 0%, transparent 70%)',
-        top: '-150px', right: '-150px', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0,
+        top: '-150px', right: '-150px', pointerEvents: 'none', zIndex: 0,
       }} />
       <div style={{
         position: 'absolute', width: '600px', height: '600px',
         background: 'radial-gradient(circle, rgba(168,85,247,0.06) 0%, transparent 70%)',
-        bottom: '-200px', left: '-200px', filter: 'blur(90px)', pointerEvents: 'none', zIndex: 0,
+        bottom: '-200px', left: '-200px', pointerEvents: 'none', zIndex: 0,
       }} />
 
       {sidebarOpen && (

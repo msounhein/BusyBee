@@ -23,8 +23,6 @@ function StatCard({ label, value, color, link, icon }) {
         transform: hovered ? 'translateY(-2px)' : 'translateY(0)',
         boxShadow: hovered ? 'var(--shadow-md)' : 'var(--shadow-sm)',
         transition: 'all 200ms cubic-bezier(0.4, 0, 0.2, 1)',
-        backdropFilter: 'var(--glass-blur)',
-        WebkitBackdropFilter: 'var(--glass-blur)',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
@@ -453,8 +451,6 @@ export default function Dashboard() {
         transform: hovered ? 'translateY(-2px)' : 'translateY(0)',
         transition: 'all 200ms cubic-bezier(0.4, 0, 0.2, 1)',
         cursor: 'default',
-        backdropFilter: 'var(--glass-blur)',
-        WebkitBackdropFilter: 'var(--glass-blur)',
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -612,8 +608,6 @@ function ApplicationStats({ stats }) {
           transform: hovered ? 'translateY(-2px)' : 'translateY(0)',
           transition: 'all 200ms cubic-bezier(0.4, 0, 0.2, 1)',
           cursor: 'default',
-          backdropFilter: 'var(--glass-blur)',
-          WebkitBackdropFilter: 'var(--glass-blur)',
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
