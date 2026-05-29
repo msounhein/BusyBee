@@ -63,16 +63,16 @@ export default function AllJobs() {
                 <div style={{ color: 'var(--text-secondary)', fontSize: 12, marginTop: 2 }}>
                   {job.company} — {job.location || 'Location not specified'}
                 </div>
-                {hoveredId === job.id && job.match_reasoning && (
+                {job.match_reasoning && (
                   <div style={{
-                    fontSize: 12, color: 'var(--text-tertiary)', marginTop: 6,
-                    lineHeight: 1.5, fontStyle: 'italic',
-                    maxWidth: 600,
+                    fontSize: 11, color: 'var(--text-tertiary)', marginTop: 4,
+                    lineHeight: 1.4, fontStyle: 'italic',
+                    maxWidth: '100%',
                     overflow: 'hidden', textOverflow: 'ellipsis',
                     whiteSpace: 'nowrap',
                     display: 'flex', alignItems: 'center', gap: 4
                   }}>
-                    <Lightbulb size={12} style={{ color: 'var(--warning)', flexShrink: 0 }} />
+                    <Lightbulb size={11} style={{ color: 'var(--warning)', flexShrink: 0 }} />
                     <span>{job.match_reasoning}</span>
                   </div>
                 )}
