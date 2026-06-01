@@ -132,11 +132,23 @@ def get_stats():
         rejected = db.query(Job).filter(Job.status == 'rejected').count()
         top_score = db.query(Job).filter(Job.status == 'new').order_by(Job.match_score.desc()).first()
         
-        day_ago = datetime.utcnow() - timedelta(days=1)
-        week_ago = datetime.utcnow() - timedelta(days=7)
+        # Calculate timezone-aware boundaries using local system time and UTC offset
+        local_now = datetime.now()
+        utc_now = datetime.utcnow()
+        utc_offset = utc_now - local_now.replace(tzinfo=None)
+
+        # Local midnight today (in UTC)
+        local_today = local_now.replace(hour=0, minute=0, second=0, microsecond=0)
+        utc_today = local_today + utc_offset
+
+        # Local Sunday 00:00:00 of the current week (in UTC)
+        days_since_sunday = (local_now.weekday() + 1) % 7
+        local_sunday = local_now - timedelta(days=days_since_sunday)
+        local_sunday = local_sunday.replace(hour=0, minute=0, second=0, microsecond=0)
+        utc_sunday = local_sunday + utc_offset
         
-        applied_daily = db.query(Job).filter(Job.applied_date >= day_ago).count()
-        applied_weekly = db.query(Job).filter(Job.applied_date >= week_ago).count()
+        applied_daily = db.query(Job).filter(Job.applied_date >= utc_today).count()
+        applied_weekly = db.query(Job).filter(Job.applied_date >= utc_sunday).count()
         
         packet_stats = {
             'total': db.query(ResearchPacket).count(),
