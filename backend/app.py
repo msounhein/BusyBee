@@ -133,6 +133,7 @@ def get_stats():
         top_score = db.query(Job).filter(Job.status == 'new').order_by(Job.match_score.desc()).first()
         
         day_ago = datetime.utcnow() - timedelta(days=1)
+        week_ago = datetime.utcnow() - timedelta(days=7)
         
         # Calculate timezone-aware boundaries using local system time and UTC offset
         local_now = datetime.now()
